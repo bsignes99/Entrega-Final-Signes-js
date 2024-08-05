@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descripcion" content="Los ultimos modelos de las mejores marcas en el mercado">
+    <meta name="keywords" content="iphone, samsung s22, iphone 14">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <title>Productos</title>
+</head>
+<body>
+    <header> 
+        <nav class="barra-principal">    
+            <ul class="navbar">
+                <div class="flip-vertical-right">
+                    <li><a href="../index.html"><img src="../assets/img/logo.png" alt="Phonzone" class="dim-logo"></a>
+                </div>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="./accesorios.html">Accesorios</a></li>
+                <li><a href="./sucursales.html">Sucursales</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+        
+    <main  class="main-productos">
+        <div class="filtros">
+            <h1>Filtros</h1>
+            <button class="btn-filtros" id="btn-iphone" value="iphone" onclick="filtrariphone()">IPhone</button>
+            <button class="btn-filtros" id="btn-samsung" value="samsung" onclick="filtrarsamsung()">Samsung</button>
+            <button class="btn-filtros" id="btn-motorola" value="Motorola" onclick="filtrarmoto()">Motorola</button>
+            <button class="btn-filtros" id="btn-todos" value="todos" onclick="todos()">Todos</button>
+            
+        </div>
+       <section class="conteiner-all">
+          
+            <div class="conteiner-prod">
+                <div>
+                    <img src="../assets/img/motorola-c115.png" alt="">
+                </div>        
+            
+            </div>
+     
+       </section>
+
+       <script src="pre-entregatres.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    </main>
+    
+    <footer>
+        <a href="./aboutus.html">Sobre Nosotros </a>
+        <section class="icon">
+            <div> <img src="../assets/img/ig-logo.png" alt="Instagram" class="tam-ig"></div>
+        </section>
+        
+        <section class="icon">
+            <div> <img src="../assets/img/gmail-logo.png" alt="Gmail" class="tam-gral"></div>
+        </section>    
+        
+        <section class="icon">
+            <div> <img src="../assets/img/whap-logo.png" alt="Whatsapp" class="tam-gral"></div>
+        </section>    
+    </footer>
+</body>
+</html>
