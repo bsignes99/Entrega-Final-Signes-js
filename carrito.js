@@ -12,18 +12,18 @@ const subirCards = (arrayproducto) =>{
         carrito.appendChild(contenedor);
         
         const imagen = document.createElement("div");
-        imagen.innerHTML = `<img src=${producto.img} alt=""/>`
+        imagen.innerHTML = `<img src=${producto.image} alt=""/>`
         contenedor.appendChild(imagen);
         
         const info = document.createElement("div");
-        info.innerHTML = `<h2>${producto.marca} ${producto.modelo} </h2> 
-        <p>Usd $${producto.precio}</p>
+        info.innerHTML = `<h2>${producto.title} </h2> 
+        <p>Usd $${producto.price}</p>
         <section class="btn-contador">
-        <button onclick="restar(${producto.id})"> - </button>
-        <p>${producto.quantity}</p> 
-        <button onclick="sumar(${producto.id})"> + </button>
+        <a class="btn btn-2" onclick="restar(${producto.id})"> - </a>
+        <p class="cantidad">${producto.quantity}</p> 
+        <a class="btn btn-2" onclick="sumar(${producto.id})"> + </a>
         </section>
-        <button onclick="eliminar(${producto.id})"> Elminar </button>`;
+        <a class="btn btn-2" onclick="eliminar(${producto.id})"> Elminar </a>`;
         contenedor.appendChild(info);   
         
     });
@@ -32,7 +32,7 @@ const subirCards = (arrayproducto) =>{
 const totalcompra= (carrito) => {
     precioTotal= 0;
     for (let i = 0; i < carrito.length; i++) {
-        precioTotal += carrito[i].quantity * carrito[i].precio;         
+        precioTotal += carrito[i].quantity * carrito[i].price;         
     };
     return precioTotal;
 };
@@ -40,7 +40,7 @@ const totalcompra= (carrito) => {
 const mostrarProd = (carrito) =>{
     resumenTotal="";
     for (let i = 0; i < carrito.length; i++) {
-        resumenTotal += " "+ carrito[i].marca + " "+ carrito[i].modelo + " x"+ carrito[i].quantity + "......................";         
+        resumenTotal += " "+ carrito[i].title + " " + " x"+ carrito[i].quantity + "......................";         
     };
     return resumenTotal;
 };
@@ -54,8 +54,6 @@ mostrarProd(carrito)
 
 actualizar();
 
-//let resumenCompra = document.getElementById("resumen-compra");
-//resumenCompra.innerHTML = "<p> El </p>";
 
 
 subirCards(carrito);
